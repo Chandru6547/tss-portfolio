@@ -234,3 +234,34 @@
     right: 10px;
   }
 }
+
+@media (max-width: 600px) {
+  .ts-dev-section {
+    padding: 4rem 1rem;
+  }
+
+  .dev-container {
+    gap: 2.5rem;
+  }
+
+  .dev-title {
+    font-size: 1.8rem;
+  }
+
+  .dev-floating-status {
+    bottom: -16px;
+    left: 8px;
+    padding: 0.7rem 0.85rem;
+  }
+
+  .dev-floating-metric {
+    top: 8px;
+    right: 8px;
+  }
+
+  .dev-cta-group {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

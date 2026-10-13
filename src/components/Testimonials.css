@@ -83,7 +83,7 @@
 /* Cards Grid */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1.75rem;
   margin-bottom: 3.5rem;
 }
@@ -266,5 +266,31 @@
   .testimonials-footer-stat {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ts-testimonials-section {
+    padding: 4rem 1rem;
+  }
+
+  .testimonials-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonials-title {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+
+  .author-name-row {
+    flex-wrap: wrap;
+  }
+
+  .testimonials-footer-stat {
+    padding: 1.25rem;
   }
 }

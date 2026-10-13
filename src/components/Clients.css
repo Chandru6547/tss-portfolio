@@ -179,7 +179,23 @@
 }
 
 @media (max-width: 480px) {
+  .ts-clients-section {
+    padding: 4rem 1rem;
+  }
+
+  .clients-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .clients-title {
+    font-size: 1.8rem;
+  }
+
   .clients-grid {
     grid-template-columns: 1fr;
+  }
+
+  .clients-trust-banner {
+    padding: 1.25rem;
   }
 }

@@ -262,3 +262,58 @@
     gap: 1rem;
   }
 }
+
+@media (max-width: 600px) {
+  .ts-features-section {
+    padding: 4rem 1rem;
+  }
+
+  .features-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .features-title {
+    font-size: 1.8rem;
+  }
+
+  .features-tabs-nav {
+    gap: 0.5rem;
+  }
+
+  .features-tab-btn {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.875rem;
+  }
+
+  .features-showcase-panel {
+    padding: 1.25rem;
+    gap: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .showcase-headline {
+    font-size: 1.4rem;
+  }
+
+  .showcase-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .window-header {
+    padding: 0.75rem;
+  }
+
+  .window-body {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
