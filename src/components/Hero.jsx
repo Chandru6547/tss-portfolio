@@ -14,16 +14,6 @@ const FEATURE_MODULES = [
     colorScheme: 'blue',
   },
   {
-    id: 'practice',
-    title: 'Targeted Practice Track',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    colorScheme: 'teal',
-  },
-  {
     id: 'labs',
     title: 'Cloud Labs & Code Visualizer',
     icon: (
@@ -34,27 +24,6 @@ const FEATURE_MODULES = [
     colorScheme: 'indigo',
   },
   {
-    id: 'curriculum',
-    title: 'Curriculum & Courseware',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    colorScheme: 'amber',
-  },
-  {
-    id: 'integration',
-    title: 'Global Platform Sync',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-      </svg>
-    ),
-    colorScheme: 'blue-dark',
-  },
-  {
     id: 'lsrw',
     title: 'AI Communication (LSRW)',
     icon: (
@@ -63,16 +32,6 @@ const FEATURE_MODULES = [
       </svg>
     ),
     colorScheme: 'emerald',
-  },
-  {
-    id: 'training',
-    title: 'Enterprise Upskilling',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    colorScheme: 'purple',
   },
   {
     id: 'placement',
@@ -90,7 +49,6 @@ const METRICS = [
   { value: '500+', label: 'Universities & Enterprises' },
   { value: '99.9%', label: 'Platform Reliability' },
   { value: 'ISO 27001', label: 'Certified Infrastructure' },
-  { value: 'AI-Guided', label: 'Outcome Analytics' },
 ];
 
 export default function Hero() {
@@ -167,35 +125,12 @@ export default function Hero() {
         {/* Right Media Column */}
         <div className="hero-right animate-fade-in" style={{ '--delay': '0.4s' }}>
           <div className="hero-media-wrapper">
-            <div className="hero-backdrop-glow" aria-hidden="true" />
-            
             <img 
               src={codingman} 
               alt="Platform interface demonstrating student coding evaluation and metrics" 
               className="hero-main-img" 
               loading="eager"
             />
-
-            {/* Overlay 1: Interactive Terminal with Floating Animation */}
-            <div className="floating-card terminal-card float-card-primary" aria-hidden="true">
-              <div className="terminal-header">
-                <div className="terminal-traffic-lights">
-                  <span className="dot dot-close" />
-                  <span className="dot dot-minimize" />
-                  <span className="dot dot-expand" />
-                </div>
-                <span className="terminal-title">assessment_runtime.py</span>
-                <span className="terminal-status-pill">Running</span>
-              </div>
-              <pre className="terminal-body">
-                <code>
-                  <span className="code-keyword">async def</span> <span className="code-function">evaluate</span>(student_id):{'\n'}
-                  {'  '}res = <span className="code-keyword">await</span> sandbox.execute(){'\n'}
-                  {'  '}<span className="code-keyword">return</span> {'{'} status: <span className="code-string">"Passed"</span> {'}'}
-                  <span className="code-cursor" />
-                </code>
-              </pre>
-            </div>
           </div>
         </div>
       </div>
