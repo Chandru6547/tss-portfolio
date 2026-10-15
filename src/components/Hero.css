@@ -601,7 +601,7 @@
 
 .hero-section {
   padding: 4.5rem 1.5rem;
-  background: #f5f8fc;
+  background: linear-gradient(115deg, #f1f7f5 0%, #f7f9fc 58%, #eef4fa 100%);
   color: var(--text-main);
 }
 
@@ -613,15 +613,15 @@
 }
 
 .hero-left {
-  gap: 1.25rem;
+  gap: 1.4rem;
 }
 
 .hero-badge {
-  padding: 0.4rem 0.8rem;
-  background: #eaf2fa;
-  border-color: #d3e1ef;
-  border-radius: 6px;
-  color: #244b73;
+  padding: 0.45rem 0.8rem;
+  background: #e6f2ed;
+  border-color: #c9e0d5;
+  border-radius: 4px;
+  color: #205948;
   font-size: 0.78rem;
   letter-spacing: 0;
 }
@@ -635,8 +635,8 @@
 
 .hero-title {
   max-width: 680px;
-  font-size: 3.35rem;
-  line-height: 1.08;
+  font-size: 3.5rem;
+  line-height: 1.1;
   font-weight: 700;
   letter-spacing: 0;
   color: var(--text-main);
@@ -644,14 +644,14 @@
 
 .hero-title-highlight {
   background: none;
-  color: #245d91;
+  color: #187563;
   -webkit-text-fill-color: currentColor;
 }
 
 .hero-description {
-  max-width: 600px;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  max-width: 570px;
+  font-size: 1.02rem;
+  line-height: 1.75;
   color: var(--text-muted);
 }
 
@@ -663,6 +663,11 @@
 
 .hero-feature-item {
   gap: 0.7rem;
+}
+
+.hero-features-grid {
+  column-gap: 1.2rem;
+  row-gap: 1rem;
 }
 
 .feature-icon-badge {
@@ -753,12 +758,14 @@
 
   .hero-container {
     grid-template-columns: 1fr;
+    font-family: sans-serif;
     gap: 2.75rem;
   }
 
   .hero-left {
     align-items: center;
     text-align: center;
+    font-family : sans-serif;
   }
 
   .hero-title,
