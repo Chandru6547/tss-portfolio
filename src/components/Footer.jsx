@@ -4,6 +4,8 @@ import logo from "../assests/logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const isInviteTrainingPage = window.location.pathname.replace(/\/$/, "") === "/invite-training";
+  const homeAnchor = (id) => (isInviteTrainingPage ? `/#${id}` : `#${id}`);
 
   return (
     <footer className="ts-footer" id="contact">
@@ -12,7 +14,7 @@ export default function Footer() {
           {/* Brand & Direct Contact Column */}
           <div className="footer-brand-col">
           
-            <a href="#test" className="footer-brand">
+            <a href="/" className="footer-brand">
               <img src={logo} alt="TechSign Solutions Logo" className="footer-logo" />
               <span className="footer-brand-name">TechSign Solutions</span>
             </a>
@@ -53,33 +55,34 @@ export default function Footer() {
             <div className="footer-links-col">
               <h4 className="footer-col-title">Platform</h4>
               <ul className="footer-list">
-                <li><a href="#features">Adaptive Assessments</a></li>
-                <li><a href="#product">Cloud Workspaces</a></li>
-                <li><a href="#features">Code Visualizer</a></li>
-                <li><a href="#product">Placement Automation</a></li>
-                <li><a href="#interactive-tour">Live Sandbox</a></li>
+                <li><a href={homeAnchor("features")}>Adaptive Assessments</a></li>
+                <li><a href={homeAnchor("product")}>Cloud Workspaces</a></li>
+                <li><a href={homeAnchor("features")}>Code Visualizer</a></li>
+                <li><a href={homeAnchor("product")}>Placement Automation</a></li>
+                <li><a href={homeAnchor("interactive-tour")}>Live Sandbox</a></li>
               </ul>
             </div>
 
             <div className="footer-links-col">
               <h4 className="footer-col-title">Campus Programs</h4>
               <ul className="footer-list">
-                <li><a href="#testimonials">Student Upskilling</a></li>
-                <li><a href="#request-demo">Institutional Demo</a></li>
-                <li><a href="#curriculum">LSRW Communication</a></li>
-                <li><a href="#product">Faculty Dashboard</a></li>
-                <li><a href="#request-demo">Hackathons & Drives</a></li>
+                <li><a href={homeAnchor("testimonials")}>Student Upskilling</a></li>
+                <li><a href={homeAnchor("request-demo")}>Institutional Demo</a></li>
+                <li><a href={homeAnchor("curriculum")}>LSRW Communication</a></li>
+                <li><a href={homeAnchor("product")}>Faculty Dashboard</a></li>
+                <li><a href="/invite-training">Invite us for CRT training</a></li>
+                <li><a href={homeAnchor("request-demo")}>Hackathons & Drives</a></li>
               </ul>
             </div>
 
             <div className="footer-links-col">
               <h4 className="footer-col-title">Portals</h4>
               <ul className="footer-list">
-                <li><a href="#student-login">Student Login</a></li>
-                <li><a href="#institution-login">Institution Admin</a></li>
-                <li><a href="#admin-login">Enterprise Portal</a></li>
-                <li><a href="#privacy">Privacy & Security</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href={homeAnchor("student-login")}>Student Login</a></li>
+                <li><a href={homeAnchor("institution-login")}>Institution Admin</a></li>
+                <li><a href={homeAnchor("admin-login")}>Enterprise Portal</a></li>
+                <li><a href={homeAnchor("privacy")}>Privacy & Security</a></li>
+                <li><a href={homeAnchor("terms")}>Terms of Service</a></li>
               </ul>
             </div>
           </div>

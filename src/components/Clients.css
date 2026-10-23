@@ -49,15 +49,60 @@
   color: #64748b;
 }
 
-/* Cards Grid */
+/* College Slider */
+.clients-carousel-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin: -2.25rem 0 1rem;
+}
+
+.clients-carousel-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #d5e2e4;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #176b5b;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.clients-carousel-controls button:hover {
+  background: #e8f3ee;
+  border-color: #a9cbbd;
+  transform: translateY(-1px);
+}
+
+.clients-carousel-controls button:focus-visible,
+.clients-grid:focus-visible {
+  outline: 3px solid rgb(23 107 91 / 0.35);
+  outline-offset: 3px;
+}
+
 .clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.25rem 0.1rem 1rem;
   margin-bottom: 3.5rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.clients-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .client-card {
+  flex: 0 0 calc((100% - 2rem) / 3);
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
@@ -68,6 +113,7 @@
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  scroll-snap-align: start;
 }
 
 .client-card:hover {
@@ -164,8 +210,8 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .client-card {
+    flex-basis: calc((100% - 1rem) / 2);
   }
 
   .clients-trust-banner {
@@ -191,8 +237,12 @@
     font-size: 1.8rem;
   }
 
-  .clients-grid {
-    grid-template-columns: 1fr;
+  .clients-carousel-controls {
+    margin-top: -1.75rem;
+  }
+
+  .client-card {
+    flex-basis: 86%;
   }
 
   .clients-trust-banner {

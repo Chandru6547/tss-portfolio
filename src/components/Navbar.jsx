@@ -17,11 +17,14 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const isInviteTrainingPage = window.location.pathname.replace(/\/$/, "") === "/invite-training";
+  const homeAnchor = (id) => (isInviteTrainingPage ? `/#${id}` : `#${id}`);
+
   const navLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Product", href: "#product" },
-    { name: "Resources", href: "#resources" },
-    { name: "Contact", href: "#contact" },
+    { name: "Features", href: homeAnchor("features") },
+    { name: "Product", href: homeAnchor("product") },
+    { name: "Resources", href: homeAnchor("resources") },
+    { name: "Contact", href: homeAnchor("contact") },
   ];
 
   return (
@@ -29,7 +32,7 @@ export default function Navbar() {
       <nav className="ts-navbar">
         <div className="ts-nav-content">
           {/* Logo & Brand Name */}
-          <a href="123" className="ts-brand">
+          <a href="/" className="ts-brand">
             <img src={logo} alt="TechSign Solutions Logo" className="ts-brand-logo" />
             <span className="ts-brand-name">TechSign Solutions</span>
           </a>
@@ -84,8 +87,8 @@ export default function Navbar() {
             </div>
 
             {/* CTA Button */}
-            <a href="#get-started" className="ts-btn-primary">
-              Get Started
+            <a href="/invite-training" className="ts-btn-primary">
+              Invite us for CRT training
             </a>
           </div>
 
@@ -137,8 +140,8 @@ export default function Navbar() {
             <a href="#signin" className="ts-mobile-link">
               Sign in
             </a>
-            <a href="#get-started" className="ts-btn-primary mobile-full">
-              Get Started
+            <a href="/invite-training" className="ts-btn-primary mobile-full">
+              Invite us for CRT training
             </a>
           </div>
         )}
