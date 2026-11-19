@@ -4,16 +4,42 @@
   box-sizing: border-box;
 }
 
+:root {
+  color-scheme: light;
+  font-family: sans-serif;
+  --font-family-base: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-ink: #142d3a;
+  --color-muted: #506572;
+  --color-brand: #176b5b;
+  --color-brand-dark: #105547;
+  --color-border: #dce5e8;
+  --shadow-card: 0 18px 48px -30px rgb(20 45 58 / 0.32);
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-base);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 img,
 svg {
   max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal overflow on all pages */
+html, body {
+  overflow-x: hidden;
 }
 
 code {

@@ -41,6 +41,8 @@
   font-weight: 800;
   color: #0f172a;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .footer-brand-desc {

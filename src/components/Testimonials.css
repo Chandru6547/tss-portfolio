@@ -286,6 +286,15 @@
     padding: 1.25rem;
   }
 
+  .card-meta {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .card-tag {
+    font-size: 0.65rem;
+  }
+
   .author-name-row {
     flex-wrap: wrap;
   }

@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
 
             <div className="footer-contact-cards">
-              <a href="mailto:campusconnect@teamtechsign.in" className="contact-card">
+              <a href="mailto:infot@teamtechsign.in" className="contact-card">
                 <span className="contact-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -32,7 +32,7 @@ export default function Footer() {
                 </span>
                 <div>
                   <span className="contact-type">Email Campus Relations</span>
-                  <strong className="contact-value">campusconnect@teamtechsign.in</strong>
+                  <strong className="contact-value">info@teamtechsign.in</strong>
                 </div>
               </a>
 

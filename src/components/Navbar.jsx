@@ -96,7 +96,9 @@ export default function Navbar() {
           <button
             type="button"
             className="ts-mobile-toggle"
-            aria-label="Toggle Menu"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="ts-mobile-menu"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             {isMobileMenuOpen ? (
@@ -125,7 +127,7 @@ export default function Navbar() {
 
         {/* Mobile Dropdown Panel */}
         {isMobileMenuOpen && (
-          <div className="ts-mobile-menu">
+          <div className="ts-mobile-menu" id="ts-mobile-menu">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -137,10 +139,10 @@ export default function Navbar() {
               </a>
             ))}
             <div className="ts-mobile-divider"></div>
-            <a href="#signin" className="ts-mobile-link">
+            <a href="#signin" className="ts-mobile-link" onClick={() => setIsMobileMenuOpen(false)}>
               Sign in
             </a>
-            <a href="/invite-training" className="ts-btn-primary mobile-full">
+            <a href="/invite-training" className="ts-btn-primary mobile-full" onClick={() => setIsMobileMenuOpen(false)}>
               Invite us for CRT training
             </a>
           </div>

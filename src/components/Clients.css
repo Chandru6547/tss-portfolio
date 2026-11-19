@@ -248,4 +248,8 @@
   .clients-trust-banner {
     padding: 1.25rem;
   }
+
+  .trust-item strong {
+    font-size: 1.25rem;
+  }
 }
